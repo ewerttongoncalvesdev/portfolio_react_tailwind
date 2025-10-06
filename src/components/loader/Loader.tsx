@@ -38,7 +38,7 @@ export default function Loader() {
           exit={{ opacity: 0, transition: { duration: 1.5 } }}
           className="fixed inset-0 flex items-center justify-center bg-black z-50 overflow-hidden"
         >
-          {/* Nome digitando */}
+          {/* Nome sendo digitado */}
           {!showMatrix && (
             <motion.h1
               className="text-green-400 text-4xl md:text-6xl font-mono tracking-wider text-center"
@@ -50,7 +50,7 @@ export default function Loader() {
             </motion.h1>
           )}
 
-          {/* Efeito Matrix */}
+          {/* Efeito Matrix caindo de cima para baixo */}
           {showMatrix && (
             <motion.div
               className="absolute inset-0 bg-black text-green-500 font-mono text-[12px] leading-tight opacity-80 text-center"
@@ -73,15 +73,16 @@ function MatrixRain() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const line = Array.from({ length: 80 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
-      setMatrix((prev) => [...prev.slice(-25), line]); // Limita o número de linhas visíveis
+      const line = Array.from({ length: 100 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
+      // Agora as linhas caem de cima para baixo
+      setMatrix((prev) => [line, ...prev.slice(0, 25)]); 
     }, 60);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="absolute inset-0 p-4 flex flex-col-reverse">
+    <div className="absolute inset-0 p-4 flex flex-col">
       {matrix.map((line, i) => (
         <div key={i} className="text-green-400 opacity-70">
           {line}

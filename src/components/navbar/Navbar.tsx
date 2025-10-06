@@ -21,12 +21,12 @@ function Navbar() {
             Projetos
           </Link>
 
-          <Link
+          {/*<Link
             to="/contato"
             className="hover:text-[#00aaff] transition-colors"
           >
             Contato
-          </Link>
+          </Link>*/}
         </div>
       </nav>
     </header>
