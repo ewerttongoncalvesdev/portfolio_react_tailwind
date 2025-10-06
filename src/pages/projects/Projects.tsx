@@ -11,22 +11,22 @@ const projects = [
     frontendLink: "https://github.com/Grupo-05-Turma-JavaScript-08/nexo_front"
   },
   {
-    src: "https://picsum.photos/800/400?2",
-    title: "Projeto 2",
+    src: "https://ik.imagekit.io/lfhdhvrkd/marmitech.png?updatedAt=1759764320056",
+    title: "Delivery - Marmitech",
     desc: "Descrição do projeto 2",
-    tech: ["Node.js", "PostgreSQL", "NestJS"],
-    siteLink: "#",
-    backendLink: "#",
-    frontendLink: "#"
+    tech: ["NestJS", "Node.JS", "TypeScript", "Tailwind", "MySQL", "Insomnia", "Git" , "Github", "Notion", "Trello" ],
+    siteLink: "https://marmitech.netlify.app/",
+    backendLink: "https://github.com/Grupo-05-Turma-JavaScript-08/marmitech_back",
+    frontendLink: "https://github.com/Grupo-05-Turma-JavaScript-08/marmitech_front"
   },
   {
-    src: "https://picsum.photos/800/400?3",
-    title: "Projeto 3",
+    src: "https://ik.imagekit.io/lfhdhvrkd/farmacia.png?updatedAt=1759768822181",
+    title: "Sistema para Farmácia",
     desc: "Descrição do projeto 3",
     tech: ["JavaScript", "HTML", "CSS"],
     siteLink: "#",
-    backendLink: "#",
-    frontendLink: "#"
+    backendLink: "https://github.com/ewerttongoncalvesdev/projeto_fiarmacia_backend",
+    frontendLink: "https://github.com/ewerttongoncalvesdev/projeto_farmacia_frontend"
   },
 ];
 
