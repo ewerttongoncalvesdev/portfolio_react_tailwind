@@ -1,29 +1,36 @@
 import { Link } from "react-router-dom"
 
 function Navbar() {
-    return (
-        <div className='w-full flex justify-center py-4 bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-400 shadow-lg backdrop-blur-sm'>
-            <div className="container flex justify-between items-center text-2xl font-bold px-6 py-2">
-                <Link 
-                    to='/sobre' 
-                    className="relative text-2xl font-bold text-gray-800 hover:text-gray-900 transition-all duration-300 group"
-                >
-                    Ewertton Gonçalves
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+  return (
+    <header className="w-full bg-[#1a1f25] text-white shadow-md">
+      <nav className="container mx-auto flex justify-between items-center py-4 px-6">
+        {/* Nome à esquerda */}
+        <Link
+          to="/"
+          className="text-2xl font-bold hover:text-[#00aaff] transition-colors"
+        >
+          Ewertton Gonçalves
+        </Link>
 
-                <div className='flex gap-8 items-center'>
-                    <Link 
-                        to='/projetos' 
-                        className="relative text-xl font-semibold text-gray-800 hover:text-gray-900 transition-all duration-300 hover:scale-110 group"
-                    >
-                        Projetos
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all duration-300 group-hover:w-full"></span>
-                    </Link>
-                </div>
-            </div>
+        {/* Links à direita */}
+        <div className="flex gap-8 text-lg">
+          <Link
+            to="/projetos"
+            className="hover:text-[#00aaff] transition-colors"
+          >
+            Projetos
+          </Link>
+
+          <Link
+            to="/contato"
+            className="hover:text-[#00aaff] transition-colors"
+          >
+            Contato
+          </Link>
         </div>
-    )
+      </nav>
+    </header>
+  )
 }
 
 export default Navbar

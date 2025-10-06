@@ -1,47 +1,48 @@
 import perfil from "../../assets/img/perfil.jpg";
+import { FaJs, FaNodeJs, FaReact, FaDatabase } from "react-icons/fa";
 
 function Home() {
   return (
-    <div className="bg-gradient-to-br from-gray-50 via-white to-cyan-50 flex justify-center min-h-screen">
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 mt-12">
+    <main className="flex-grow bg-[#0e141b] text-white flex flex-col items-center py-16">
+      {/* Container Principal */}
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-6">
         
-        {/* Sobre mim */}
-        <div className="flex flex-col gap-4 justify-center order-2 lg:order-1">
-          <div className="space-y-3">
-            <h2 className="text-5xl font-bold text-gray-800 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-              Sobre
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
-          </div>
-          
-          <div className="space-y-3 text-gray-700">
-            <p className="text-justify leading-relaxed">
-              Sou <span className="font-semibold text-gray-900">Ewertton Gonçalves</span>, atualmente curso Engenharia de Software, consolidando minha base acadêmica para evoluir na área de tecnologia.
-            </p>
-            <p className="text-justify leading-relaxed">
-              Praticante de jiu-jitsu, desenvolvo valores como disciplina, foco e resiliência — princípios que aplico em minha trajetória profissional. Essa prática esportiva me inspira a manter constância no aprendizado, evolução contínua e superação de desafios, competências que levo para meus projetos e equipes.
-            </p>
-            <p className="text-justify leading-relaxed">
-              Estou consolidando conhecimentos em <span className="font-medium text-cyan-700">JavaScript, TypeScript, HTML, CSS, React, Tailwind, Node.js, NestJS, Git</span> e bancos de dados relacionais <span className="font-medium text-cyan-700">(MySQL / PostgreSQL)</span>. Possuo experiência anterior em engenharia e manutenção, que me proporcionou habilidades transferíveis como resolução de problemas, comunicação eficaz, trabalho em equipe e gestão de tempo.
-            </p>
-          </div>
-        </div>
-        
-        {/* Foto Perfil */}
-        <div className="flex justify-center items-center order-1 lg:order-2">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-            <img 
-              className="relative rounded-full w-72 h-72 lg:w-96 lg:h-96 object-cover border-4 border-white shadow-2xl transform group-hover:scale-105 transition duration-300"
-              src={perfil} 
+        {/* Foto com brilho */}
+        <div className="flex justify-center">
+          <div className="relative">
+            <div className="absolute inset-0 rounded-full blur-3xl bg-blue-500 opacity-40 animate-pulse"></div>
+            <img
+              src={perfil}
               alt="Ewertton Gonçalves"
+              className="relative rounded-full w-72 h-72 object-cover shadow-[0_0_60px_#00bfff]"
             />
           </div>
         </div>
 
+        {/* Texto Sobre */}
+        <div className="space-y-4">
+          <h2 className="text-4xl font-bold text-[#00aaff]">Sobre</h2>
+          <p className="leading-relaxed text-gray-300">
+            <span className="font-semibold text-white">Desenvolvedor Full Stack JavaScript</span> e estudante de Engenharia de Software, consolidando minha base acadêmica para avançar na área de tecnologia.
+          </p>
+          <p className="leading-relaxed text-gray-300">
+            Praticante de jiu-jitsu, desenvolvo valores como disciplina, foco e resiliência — princípios que aplico em minha trajetória profissional. Essa prática esportiva me inspira a manter constância no aprendizado, evolução contínua e superação de desafios, competências que levo para meus projetos e equipes.
+          </p>
+        </div>
       </div>
-    </div>
-  )
+
+      {/* Stacks */}
+      <section className="mt-20 text-center">
+        <h3 className="text-3xl font-bold text-[#00aaff] mb-8">Stacks</h3>
+        <div className="flex justify-center gap-10 flex-wrap">
+          <FaJs className="text-6xl text-[#00aaff] border-2 border-[#00aaff] rounded-full p-3 hover:scale-110 transition-transform duration-300" />
+          <FaNodeJs className="text-6xl text-[#00aaff] border-2 border-[#00aaff] rounded-full p-3 hover:scale-110 transition-transform duration-300" />
+          <FaReact className="text-6xl text-[#00aaff] border-2 border-[#00aaff] rounded-full p-3 hover:scale-110 transition-transform duration-300" />
+          <FaDatabase className="text-6xl text-[#00aaff] border-2 border-[#00aaff] rounded-full p-3 hover:scale-110 transition-transform duration-300" />
+        </div>
+      </section>
+    </main>
+  );
 }
 
-export default Home
+export default Home;

@@ -1,36 +1,35 @@
-import {GithubLogoIcon, LinkedinLogoIcon} from '@phosphor-icons/react'
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 function Footer() {
+  return (
+    <footer className="bg-[#1a1f25] text-white py-8 mt-auto">
+      <div className="text-center">
+        <p className="text-gray-300 mb-4 text-lg">
+          Acesse minhas redes sociais!
+        </p>
 
-    return (
-        <div className="flex justify-center bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-400 text-black shadow-lg">
-            <div className="container flex flex-col items-center py-8 px-6 gap-4">
-                <p className='text-xl font-bold text-gray-800'>
-                    Portfolio Ewertton Gonçalves 
-                </p>
-                <p className='text-base text-gray-700 font-medium'>Acesse minhas redes sociais</p>
-                <div className='flex gap-4 mt-2'>
-                    <a 
-                        href='https://www.linkedin.com/in/ewerttongoncalves/' 
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='text-gray-800 hover:text-blue-600 transition-all duration-300 hover:scale-125 hover:-translate-y-1'
-                    >
-                        <LinkedinLogoIcon size={48} weight='bold' />
-                    </a>
-                    
-                    <a 
-                        href='https://github.com/ewerttongoncalvesdev' 
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='text-gray-800 hover:text-gray-900 transition-all duration-300 hover:scale-125 hover:-translate-y-1'
-                    >
-                        <GithubLogoIcon size={48} weight='bold' />
-                    </a>
-                </div>
-            </div>
+        <div className="flex justify-center gap-6">
+          <a
+            href="https://www.linkedin.com/in/ewerttongoncalves/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:scale-110 transition-transform duration-300"
+          >
+            <FaLinkedin className="text-3xl text-[#00aaff] hover:text-[#33cfff] transition-colors" />
+          </a>
+
+          <a
+            href="https://github.com/ewerttongoncalvesdev"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:scale-110 transition-transform duration-300"
+          >
+            <FaGithub className="text-3xl text-gray-300 hover:text-white transition-colors" />
+          </a>
         </div>
-    )
+      </div>
+    </footer>
+  )
 }
 
 export default Footer
